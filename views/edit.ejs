@@ -1,0 +1,37 @@
+<%- include('./base/header.ejs') %> 
+    
+<div class="container">
+    <div class="alert">
+        <h3>Edit  Account</h3>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="col"></div>
+        <div class="col">
+            <form action="/update/<%= user._id %>" method="post">
+                <div class="field" class="my-3">
+                    <label for="" class="form-label" >Name</label>
+                    <input type="text" class="form-control" name="name" value="<%= user.name %>" placeholder="enter your name">
+                </div>
+                <div class="field" class="my-3">
+                    <label for="" class="form-label"">City</label>
+                    <input type="text" class="form-control" name="city" placeholder="enter your city"  value="<%= user.city %>">
+                </div>
+                <div class="field" class="my-3">
+                    <label for="" class="form-label"  >Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="enter your mail"  value="<%= user.email %> " >
+                </div>
+                <div class="field" class="my-3">
+                    <label for="" class="form-label" >Contact Number</label>
+                    <input type="text" class="form-control" name="contact" placeholder="enter your contact number" value="<%= user.contact %>" >
+                </div>
+                <button type="submit" class="my-4">submit</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+<%- include('./base/footer.ejs') %> 
+
+ 

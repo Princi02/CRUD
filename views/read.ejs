@@ -1,0 +1,40 @@
+<%- include('./base/header.ejs') %>
+
+
+    <div class="container y-3">
+            <div class="alert bg-warning">
+                <h4 class="text-center">All Records</h4>
+            </div>
+    </div>
+
+
+    <div class="container">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(users) {%>
+
+                    <% for (i=0;i<users.length;i++) { %>
+                        <tr>
+                            <td><%= users[i].name %></td>
+                            <td><%= users[i].city %></td>
+                            <td><%= users[i].email %></td>
+                            <td><%= users[i].contact %></td>
+                            <td><a href="/edit/<%= users[i]._id %>" class="btn btn-warning"> Edit</a></td>
+                            <td><a href="/delete/<%= users[i]._id %>" class="btn btn-warning"> Delete</a></td>
+                        </tr>
+                    <% } %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+<%- include('./base/footer.ejs') %>

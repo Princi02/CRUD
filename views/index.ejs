@@ -1,0 +1,37 @@
+<%- include('./base/header.ejs') %> 
+    
+<div class="container">
+    <div class="alert">
+        <h3>Create  Account</h3>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="col"></div>
+        <div class="col">
+            <form action="/create" method="post">
+                <div class="field" class="my-3">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="enter your name">
+                </div>
+                <div class="field" class="my-3">
+                    <label for="" class="form-label">City</label>
+                    <input type="text" class="form-control" name="city" placeholder="enter your city">
+                </div>
+                <div class="field" class="my-3">
+                    <label for="" class="form-label">Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="enter your mail">
+                </div>
+                <div class="field" class="my-3">
+                    <label for="" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" name="contact" placeholder="enter your contact number">
+                </div>
+                <button type="submit" class="my-4">submit</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+<%- include('./base/footer.ejs') %> 
+
+ 
